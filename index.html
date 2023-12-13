@@ -8,51 +8,82 @@
     <script src="https://kit.fontawesome.com/78ae0df449.js" crossorigin="anonymous"></script>    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
-    
+    <title>Edward Fortin Portfolio Website</title>
 
 </head>
 <body>
-   
+    
         <!--index-->  
-        <div id="particles-js">
-            <script src="particles.js"></script>
-            <script src="app.js"></script>
+    <div id="particles-js">
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
 
-            <h1>Hi, I am <span style="color: #FFA200;">Edward</span></h1>
-            <p>Backend Developer</p>
-            <nav class="fill">
-                <ul>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#social" class="nav-link">Social</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <a class="down" href="#about" data-scroll><i class="fa-solid fa-arrow-down fa-bounce fa-3x" aria-hidden="true"></i></a>
-        </div>
-        </div>        
-
+        <h1 class="index-h1">Hi, I am <span style="color: #FFA200;">Edward</span></h1>
+        <p class="index-p">Backend Developer</p>
+        <nav class="fill">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#social" class="nav-link">Social</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>        
+        
         <!--about-->
-        <section id = "about">
-            <div class = "about-me-section">
-                <h1>ABOUT ME</h1>
-                <img src="images/pic2.JPG">
-                <p class = "intro">Hello! I'm John Edward Fortin, a passionate second-year student pursuing 
-                    a degree in Bachelor of Science in Information Technology at Rizal Technological University. I have a genuine love for all things related to backend development and programming. Exploring the intricacies of coding and solving complex problems is not just a hobby but a journey that I'm excited to embark on every day. As I continue my academic journey, I'm eager to delve deeper into the world of technology, 
-                    enhance my skills, and contribute meaningfully to the ever-evolving field of IT.</p>
-                <div class = "skills">
-                    <h1>SKILLS</h1>
-                    
+    <div id = "about">
+        <div class = "container">
+            <h1 class="about-h1">ABOUT ME</h1>
+            <div class="columns">
+                <div class = "about-column-1">
+                    <img src="images/pic2.JPG">
                 </div>
-            </div>
-            
 
-            
-            
+                <div class= "about-column-2">
+                    
+                    <p class = "intro">
+                        Hello! I'm John Edward Fortin, a passionate second-year student pursuing 
+                        a degree in Bachelor of Science in Information Technology at Rizal Technological University. I have a genuine love for all things related to backend development and programming. Exploring the intricacies of coding and solving complex problems is not just a hobby but a journey that I'm excited to embark on every day. As I continue my academic journey, I'm eager to delve deeper into the world of technology
+                        enhance my skills, and contribute meaningfully to the ever-evolving field of IT.</p>
                 
-            
-        </section>
-            
+                </div>    
+            </div>  
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-content" id = "skills">   <!--info needed-->
+                <ul>
+                    <li><span>Software Developer</span>
+                        <br> EXPLAIN !!!</li> 
+                    <li><span>Hardware Troubleshooting</span>
+                        <br>EXPLAIN!!!</li>
+                    <li><span>Networking</span>
+                        <br>EXPLAIN!!!</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id = "experience"> <!--info needed-->
+                <ul>
+                    <li><span>Computer Servicing</span>
+                        <br> EXPLAIN !!!</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id = "education"> <!--info needed-->
+                <ul>
+                    <li><span>Highschool</span>
+                        <br> EXPLAIN !!!</li>
+                    <li><span>Senior Highschool</span>
+                        <br>EXPLAIN!!!</li>
+                    <li><span>College</span>
+                        <br>EXPLAIN!!!</li>
+                </ul>
+            </div>
+        </div>
+    </div>  
         
         
         
