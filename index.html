@@ -36,45 +36,86 @@
             <h1 class="about-h1">ABOUT ME</h1>
             <div class="columns">
                 <div class = "about-column-1">
-                    <img src="images/pic2.JPG">
+                    <img src="images/pic2.JPG" alt="Edward Fortin">
                 </div>
 
                 <div class= "about-column-2">
                     
-                    <p class = "intro">
-                        Hello! I'm <span style="color: #FFA200; font-weight: 600;">John Edward Fortin</span>, a passionate second-year student pursuing 
-                        a degree in Bachelor of Science in Information Technology at Rizal Technological University. I have a genuine love for all things related to backend development and programming. Exploring the intricacies of coding and solving complex problems is not just a hobby but a journey that I'm excited to embark on every day. As I continue my academic journey, I'm eager to delve deeper into the world of technology
-                        enhance my skills, and contribute meaningfully to the ever-evolving field of IT.</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
+                    
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('intro')">Introduction</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-content active-tab" id = "intro">   <!--info needed-->
+                        <p class = "intro">
+                            Hello! I'm <span style="color: #FFA200; font-weight: 700;">John Edward Fortin</span>, a passionate second-year student pursuing a degree<br> in Bachelor of Science in Information Technology at Rizal Technological University. <br>
+                            <br>I have a genuine love for all things related to backend development and<br>
+                            programming as well as a passion to continuously grow and develop my skills in<br>
+                            every aspect regarding all techs related. <br>   
+    
+                            <br>Having to explore the intricacies of coding and solving complex problems is not just<br>
+                            a hobby but a journey that I'm excited to embark on every day. Every day is a new<br>
+                            chance for me to learn and acquire new experiences to further sharpen my skills and<br>
+                            expand my scope of learning.<br>
+    
+                            <br>As I continue my academic journey, I'm eager to delve deeper into the world of<br> 
+                            technology to enhance, present, and share my skills to be able to contribute<br>
+                            meaningfully to the ever-evolving field of IT.</p>
+                    </div>
             
-                    <div class="tab-content active-tab " id = "skills">   <!--info needed-->
+                    <div class="tab-content" id = "skills">   <!--info needed-->
                         <ul>
-                            <li><span>Software Developer</span>
-                                <br> EXPLAIN !!!</li> 
-                            <li><span>Hardware Troubleshooting</span>
-                                <br>EXPLAIN!!!</li>
-                            <li><span>Networking</span>
-                                <br>EXPLAIN!!!</li>
+                            <li><span>Software Developing</span></li>
+                            <li>I am skilled and knowledgeable in the following web development languages:</li>
+                            <div class = "prog-column-1">
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>HTML</li>
+                            </div>
+                            <div class="prog-column-2">
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                            </div>
+                            <li><span>Hardware Troubleshooting</span></li>
+                            <li>It is one of the most valuable skills that I have acquired because being able to know<br> 
+                                and diagnose every possible mishap that may happen in a computer-- I am capable <br>
+                                of handling and solving. </li>
+                            <li>This skill was very useful to me, especially when I was still using an old version of PC<br> 
+                                as well as when I had built a new set-up because this had helped me to save money.</li>
+                            <li><span>Networking</span></li>
+                            <li>With the help of the skills that I have obtained, I am now capable to create and <br> 
+                                develop webs that are useful to our evolving society </li>
+                            <li>Additionally, it would help me to build connections and a vast understanding of the <br>
+                                value of network characteristics and protocols.</li>
                         </ul>
                     </div>
                     <div class="tab-content" id = "experience"> <!--info needed-->
                         <ul>
-                            <li><span>Computer Servicing</span>
-                                <br> EXPLAIN !!!</li>
+                            <li><span>Computer Servicing</span></li>
+                            <li>My Computer Servicing started last 2020, at first I was only providing my services to<br> 
+                                close relatives and friends but later on, one person suggested that I should try to<br> 
+                                expand the range of my services because she said that it not only enable me to<br> 
+                                generate an income but it will also help me to learn more about computers. I took<br> 
+                                her advice and I started enlisting my services in the Facebook marketplace and<br>
+                                sharing my posts on groups around my area. 
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-content" id = "education"> <!--info needed-->
                         <ul>
                             <li><span>Highschool</span>
-                                <br> EXPLAIN !!!</li>
-                            <li><span>Senior Highschool</span>
-                                <br>EXPLAIN!!!</li>
-                            <li><span>College</span>
-                                <br>EXPLAIN!!!</li>
+                            <li>Raises Academy (Angono, Rizal) Inc. (2016 - 2020)</li>
+                            <li><span>Senior Highschool</span></li>
+                            <li><span class="course">Jose Rizal University (2020 - 2022)</span></li>
+                            <li>Technology, Engineering, and Mathematics (STEM)</li>
+                            <li><span>College</span></li>
+                            <li><span class="course">Rizal Technological University (2022 - Present)</span></li>
+                            <li>Bachelor of Science in Information Technology</li>
                         </ul>
                     </div>
                 </div>    
@@ -84,10 +125,38 @@
         
     <div id="portfolio">
         <div class="container">
-            
             <h1 class="portfolio-h1">PORTFOLIO</h1>
+            <div class="columns">
+                <div class="portfolio-column-1">
+                    
+                </div>
+                <div class="portfolio-column-2">
+                    <img class="blackjack" src="images/blackjack-home.png" alt="Blackjack">
+                    <div class="portfolio-layer">
+                        <h3>Blackjack console game</h3>
+                        <p>A Blackjack console remake using C++</p>
+                        <a href="https://github.com/EdwardFortin/blackjack-console-game" target=”_blank”><i class="fas fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id = "social">
+        <div class="container">
+            <h1 class="social-h1">SOCIAL</h1>
+            <div class="columns">
+                <div class="social-column-1">
+                    <img class="facebook" src ="images/facebook.png" alt="Facebook">
+                    <div class="social-layer">
+                        <h3>My Facebook Profile</h3>
+                        <a href="https://www.facebook.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="social-column-2">
 
+                </div>
+            </div>
         </div>
     </div>
         
