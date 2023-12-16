@@ -189,7 +189,7 @@
             <div class="columns">
                 <div class="contact-column-1">
                     <form name="submit-to-google-sheet">
-                        <input type="text" id="name" name="Name" placeholder="Your Email:" required>
+                        <input type="text" id="Email" name="Email" placeholder="Your Email:" required>
                         <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -215,7 +215,7 @@
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => console.log('Success!', response))
                 .catch(error => console.error('Error!', error.message))
-})
+                })
         </script>
 
 </body>
