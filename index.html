@@ -17,17 +17,18 @@
     <div id="particles-js">
         <script src="particles.js"></script>
         <script src="app.js"></script>
-
-        <h1 class="index-h1">Hi, I am <span style="color: #FFA200;">Edward</span></h1>
-        <p class="index-p">Backend Developer</p>
-        <nav class="fill">
-            <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#social" class="nav-link">Social</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="index-h1">Hi, I am <span style="color: #FFA200;">Edward</span></h1>
+            <p class="index-p">Backend Developer</p>
+            <nav class="fill">
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#social" class="nav-link">Social</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>        
         
         <!--about-->
@@ -111,11 +112,11 @@
                             <li><span>Highschool</span>
                             <li>Raises Academy (Angono, Rizal) Inc. (2016 - 2020)</li>
                             <li><span>Senior Highschool</span></li>
-                            <li><span class="course">Jose Rizal University (2020 - 2022)</span></li>
-                            <li>Technology, Engineering, and Mathematics (STEM)</li>
+                            <li>Jose Rizal University (2020 - 2022)</span></li>
+                            <li><span class="course"></span>Technology, Engineering, and Mathematics (STEM)</li>
                             <li><span>College</span></li>
-                            <li><span class="course">Rizal Technological University (2022 - Present)</span></li>
-                            <li>Bachelor of Science in Information Technology</li>
+                            <li>Rizal Technological University (2022 - Present)</li>
+                            <li><span class="course">Bachelor of Science in Information Technology</span></li>
                         </ul>
                     </div>
                 </div>    
@@ -147,20 +148,75 @@
             <h1 class="social-h1">SOCIAL</h1>
             <div class="columns">
                 <div class="social-column-1">
-                    <img class="facebook" src ="images/facebook.png" alt="Facebook">
-                    <div class="social-layer">
-                        <h3>My Facebook Profile</h3>
-                        <a href="https://www.facebook.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    <div class="facebook">
+                        <img src ="images/facebook.png" alt="Facebook">
+                        <div class="facebook-layer">
+                            <h3>My Facebook Profile</h3>
+                            <a href="https://www.facebook.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <img src ="images/linkedin.png" alt="Facebook">
+                        <div class="linkedin-layer">
+                            <h3>My LinkedIn Profile</h3>
+                            <a href="https://www.facebook.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                            </div>
                     </div>
                 </div>
                 <div class="social-column-2">
+                    <div class="instagram">
+                        <img src ="images/instagram.png" alt="Instagram">
+                        <div class="instagram-layer">
+                            <h3>My Instagram Profile</h3>
+                            <a href="https://www.instagram.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                        </div>
+                    </div>
+                    <div class="github">
+                        <img src ="images/github.png" alt="Instagram">
+                        <div class="github-layer">
+                            <h3>My Github Profile</h3>
+                            <a href="https://www.instagram.com/edwardfrtn/" target=”_blank”><i class="fa-brands fa-github fa-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id = "contact">
+        <div class="container">
+            <h1 class="contact-h1">CONTACT</h1>
+            <div class="columns">
+                <div class="contact-column-1">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" id="name" name="Name" placeholder="Your Email:" required>
+                        <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-column-2">
+                    <p class="email"><i class="fa-solid fa-envelope fa-2xl"  style="color: #023e8a;"></i> Edwardfortin24.ef@gmail.com </p>
+                    <p class="telephone"><i class="fa-brands fa-telegram fa-2xl"  style="color: #023e8a;"></i></i> +63 949 792 1242 </p>
+                    <p class="telephone"><i class="fas fa-square-phone-flip fa-2xl"  style="color: #023e8a;"></i> +63 949 792 1242 </p>
+                    <div class="download">
+                        <a href="downloadable/resume.pdf" class="dl-button">Download Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
         
-        
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzUgkwXzog0FJUe003YQ56Hp-3HAVGLtGH5QGaSvxCa9wpLc95PPnEC72DkKRE67VU/exec'
+            const form = document.forms['submit-to-google-sheet']
+            
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+})
+        </script>
 
 </body>
 </html>

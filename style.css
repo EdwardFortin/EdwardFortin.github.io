@@ -30,6 +30,8 @@ body {
   font-size: 100px;
 }
 
+
+
 .index-p {
   margin: 0 20px;
   position: absolute;
@@ -39,6 +41,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 60px;
 }
+
 
 nav.fill ul {
   margin: auto;
@@ -101,6 +104,24 @@ nav.fill ul li a:hover:after {
   
 }
 
+@media only screen and (max-width: 600px) {
+  .index-h1 {
+    font-size: 50px;
+    margin-bottom: 5%;
+  } 
+  .index-p {
+    width: 50px;
+    font-size: 20px;
+    
+  } 
+
+  nav.fill ul li a {
+    font-size: 16px;
+    margin-right: -60px;
+    
+  }
+  
+}
 
 
 
@@ -214,7 +235,6 @@ nav.fill ul li a:hover:after {
   display: block;
 }
 
-
 .prog-column-1  {
   
   float: left;
@@ -240,9 +260,9 @@ nav.fill ul li a:hover:after {
 
 #education .course {
   font-weight: normal;
-
+  font-style: italic;
   color: black;
-  text-decoration: underline;
+  
 }
 
 /* portfolio */
@@ -352,60 +372,56 @@ nav.fill ul li a:hover:after {
 .social-column-1,
 .social-column-2 {
   flex-basis: 48%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px; 
+}
+
+
+.social-column-1  {
+  float: left;
+  width: 50%;
+}
+
+.social-column-2 {
+  float: left;
+  width: 50%;
+
 }
 
 #social .columns {
-  margin-top: 5%;
+  margin-left: 15%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.social-column-1 {
-  
+.facebook img,
+.linkedin img,
+.instagram img,
+.github img{
   border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.social-column-1 img {
-  border-radius: 10px;
-  width: 60%;
+  width: 65%;
   display: block;
   height: auto;
   transition: transform 0.5s;
+  
 }
 
-.social-layer {
-  width: 63%;
-  height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #023E8A);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 14px;
-  transition: height 0.5s;
+.linkedin img,
+.github img{
+  margin-top: 15%;
 }
 
-.social-layer h3 {
+.social-column-1 h3,
+.social-column-2 h3{
   color: #fff;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.social-layer p {
-  color: #fff;
-}
-
-.social-layer a {
+.social-column-1 a,
+.social-column-2 a{
   margin-top: 20px;
   color: #023E8A;
   text-decoration: none;
@@ -418,13 +434,150 @@ nav.fill ul li a:hover:after {
   text-align: center;
 }
 
-.social-column-1:hover img {
+.facebook-layer,
+.instagram-layer,
+.linkedin-layer,
+.github-layer {
+  width: 65%;
+  height: 0%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #023E8A);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.facebook:hover,
+.instagram:hover,
+.github:hover,
+.linkedin:hover {
   transform: scale(1.1);
 }
 
-.social-column-1:hover .social-layer {
+.facebook:hover .facebook-layer,
+.instagram:hover .instagram-layer,
+.linkedin:hover .linkedin-layer,
+.github:hover .github-layer {
   height: 100%;
 }
+
+/* contact */
+
+#contact {
+  height: 100vh;
+  padding: 80px 0;
+
+}
+
+.contact-h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.contact-column-1,
+.contact.-column-2 {
+  flex-basis: 48%;
+}
+
+.contact-column-1{
+  margin-top: 5%;
+  width: 70%;
+  float: left;
+}
+
+.contact-column-2 {
+  margin-top: 5%;
+  width: 30%;
+  float: left;
+}
+
+.contact.-column-1 form{
+  width: 100%;
+  
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #023E8A;
+  
+}
+
+form input,
+form textarea {
+    width: 130%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;  
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.contact-column-1 textarea {
+  resize: vertical; 
+}
+
+.contact-column-1 button {
+  background-color: #333; 
+  color: #fff; 
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form textarea {
+  height: 300px;
+}
+
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.email,
+.telephone{
+  margin-top: 5%;
+  font-size: 18px;
+}
+
+
+.download {
+  margin-top: 10%;
+}
+
+.dl-button {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: #023E8A;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.dl-button:hover {
+
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #023E8A;
+}
+
+
+  
 
 
 @keyframes circle {
