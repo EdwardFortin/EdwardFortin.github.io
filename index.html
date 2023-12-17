@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="test.css">
     <script src="https://kit.fontawesome.com/78ae0df449.js" crossorigin="anonymous"></script>    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
@@ -197,6 +196,10 @@
                         <input type="text" id="Email" name="Email" placeholder="Your Email:" required>
                         <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
+                        <div class="waiting-animation">
+                            <div class="circle-background"></div>
+                            <div class="spinner"></div>
+                        </div>
                     </form>
                 </div>
                 <div class="contact-column-2">
@@ -210,6 +213,9 @@
             </div>
         </div>
     </div>
+
+    
+      
 
     <!--modal-->
     <div id="successModal" class="modal">
@@ -230,21 +236,28 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzUgkwXzog0FJUe003YQ56Hp-3HAVGLtGH5QGaSvxCa9wpLc95PPnEC72DkKRE67VU/exec';
         const form = document.forms['submit-to-google-sheet'];
         const successModal = document.getElementById('successModal');
+        const waitingAnimation = document.querySelector('.waiting-animation');
         const closeModalBtn = document.querySelector('.close');
 
         form.addEventListener('submit', e => {
             e.preventDefault();
+            waitingAnimation.style.display = 'block';
+
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
-            console.log('Success!', response);
-            successModal.style.display = 'block';
-        })
+                console.log('Success!', response);
+                successModal.style.display = 'block';
+                waitingAnimation.style.display = 'none';
+                })
+
             .catch(error => console.error('Error!', error.message));
         });
 
             closeModalBtn.addEventListener('click', () => {
                 successModal.style.display = 'none';
+                waitingAnimation.style.display = 'none';
             });
+
     </script>
 
 
