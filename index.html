@@ -68,7 +68,7 @@
                         </ul>
                     </div>
             
-                    <div class="tab-content" id = "skills">   <!--info needed-->
+                    <div class="tab-content" id = "skills">   
                         <ul>
                             <li><span class="sub-title">Software Developing</span></li>
                             <li>I am skilled and knowledgeable in the following web development languages:</li>
@@ -95,7 +95,7 @@
                                 value of network characteristics and protocols.</li>
                         </ul>
                     </div>
-                    <div class="tab-content" id = "experience"> <!--info needed-->
+                    <div class="tab-content" id = "experience"> 
                         <ul>
                             <li><span>Computer Servicing</span></li>
                             <li>My Computer Servicing started last 2020, at first I was only providing my services to<br> 
@@ -211,18 +211,41 @@
             </div>
         </div>
     </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Form submitted successfully!</p>
+        </div>
+    </div>
         
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzUgkwXzog0FJUe003YQ56Hp-3HAVGLtGH5QGaSvxCa9wpLc95PPnEC72DkKRE67VU/exec'
-            const form = document.forms['submit-to-google-sheet']
-            
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-                })
-        </script>
+    <div class="footer">
+        <p><i class="fa-regular fa-copyright"></i> John Edward Fortin, 2023</p>
+    </div>
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzUgkwXzog0FJUe003YQ56Hp-3HAVGLtGH5QGaSvxCa9wpLc95PPnEC72DkKRE67VU/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.querySelector('.close');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+            console.log('Success!', response);
+            successModal.style.display = 'block';
+        })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+            closeModalBtn.addEventListener('click', () => {
+                successModal.style.display = 'none';
+            });
+    </script>
+
 
 </body>
 </html>
