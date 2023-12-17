@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 @media only screen and (min-width: 768px) {
     * {
         margin: 0;
@@ -190,7 +192,7 @@
         z-index: -1;
         transition: opacity 0.3s, height 0.3s;
       }
-      
+
       .tab-links:hover:after {
         opacity: 1;
         visibility: visible;
@@ -202,8 +204,6 @@
         margin: 10px 0;
         line-height: 1.5;
       }
-      
-      
       
       .tab-content ul li span {
         color: #023E8A;

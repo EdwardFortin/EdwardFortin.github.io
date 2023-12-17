@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 * {
   margin: 0;
   padding: 0;
@@ -21,20 +23,20 @@ body {
 .index-h1 {
   position: absolute;
   color: white;
-  top: 300px;
+  top: 250px;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 45px;
   white-space: nowrap;
 }
 
 .index-p {
   position: absolute;
   color: white;
-  top: 40%;
+  top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 28px;
   white-space: nowrap;
 }
 
@@ -55,7 +57,7 @@ nav.fill ul li a {
   margin-top: 30px;
   color: #fff;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 23px;
   top: -450px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -107,7 +109,7 @@ nav.fill ul li a:hover:after {
 /*about*/
 
 #about {
-  height: 150vh;
+  height: 170vh;
   padding: 80px 0;
   color: black;
 }
@@ -132,15 +134,14 @@ nav.fill ul li a:hover:after {
 }
 
 .about-h1 {
-  margin-top: -50px;
+  margin-top: -60px;
   font-size: 50px;
   text-align: center;
   
 }
 
 .tab-titles {
- margin-bottom: 50px;
- margin-top: 10px;
+  margin-top: 20px;
 }
 
 .tab-links {
@@ -156,7 +157,8 @@ nav.fill ul li a:hover:after {
   text-transform: uppercase;
 }
 
-.tab-links:hover {
+.tab-links:hover,
+.tab-links.active {
   color: white;
 }
 
@@ -195,9 +197,7 @@ nav.fill ul li a:hover:after {
 }
 
 .tab-content ul li span {
-  text-align: center;
   color: #023E8A;
-  font-size: 16px;
 }
 .tab-content.active-tab {
   display: block;
@@ -239,19 +239,20 @@ nav.fill ul li a:hover:after {
 
 #portfolio {
 
-  height: 100vh;
+  height: 70vh;
   padding: 80px 0;
 
 }
 
 .portfolio-h1 {
+  margin-top: -50px;
   font-size: 60px;
   text-align: center;
 }
 
 .portfolio-column-1,
 .portfolio-column-2 {
-  flex-basis: 48%;
+  flex-basis: 100;
 }
 
 #portfolio .columns {
@@ -259,6 +260,15 @@ nav.fill ul li a:hover:after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+
+.portfolio-column-1 {
+  text-align: center;
+}
+
+.portfolio-column-1 p {
+  margin-top: 10px;
 }
 
 .portfolio-column-2 {
@@ -269,15 +279,16 @@ nav.fill ul li a:hover:after {
 }
 
 .portfolio-column-2 img {
+  margin: 0 30px;
   border-radius: 10px;
-  width: 100%;
-  display: block;
+  width: 85%;
   height: auto;
   transition: transform 0.5s;
 }
 
 .portfolio-layer {
-  width: 100%;
+  margin: 0 30px;
+  width: 85%;
   height: 0%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #023E8A);
   border-radius: 10px;
@@ -319,7 +330,7 @@ nav.fill ul li a:hover:after {
 }
 
 .portfolio-column-2:hover img {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .portfolio-column-2:hover .portfolio-layer {
@@ -330,18 +341,19 @@ nav.fill ul li a:hover:after {
 /* social */
 
 #social {
-  height: 100vh;
+  height: 160vh;
   padding: 80px 0;
 }
 
 .social-h1 {
+  margin-top: -50px;
   font-size: 60px;
   text-align: center;
 }
 
 .social-column-1,
 .social-column-2 {
-  flex-basis: 48%;
+  flex-basis: 100%;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 10px; 
@@ -370,16 +382,27 @@ nav.fill ul li a:hover:after {
 .linkedin img,
 .instagram img,
 .github img{
+  margin: 0 -5px;
   border-radius: 10px;
-  width: 65%;
+  width: 85%;
   display: block;
   height: auto;
   transition: transform 0.5s;
   
 }
 
+.social-column-1 p,
+.social-column-2 p {
+  color: black;
+  margin: 0 100px;
+  margin-top: 10px;
+
+}
+
 .linkedin img,
-.github img{
+.github img,
+.facebook img,
+.instagram img{
   margin-top: 15%;
 }
 
@@ -392,14 +415,13 @@ nav.fill ul li a:hover:after {
 
 .social-column-1 a,
 .social-column-2 a{
-  margin-top: 20px;
   color: #023E8A;
   text-decoration: none;
   font-size: 18px;
-  line-height: 60px;
+  line-height: 55px;
   background: #fff;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   text-align: center;
 }
@@ -408,7 +430,8 @@ nav.fill ul li a:hover:after {
 .instagram-layer,
 .linkedin-layer,
 .github-layer {
-  width: 65%;
+  margin: 0 -5px;
+  width: 85%;
   height: 0%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #023E8A);
   border-radius: 10px;
@@ -448,6 +471,7 @@ nav.fill ul li a:hover:after {
 }
 
 .contact-h1 {
+  margin-top: -10px;
   font-size: 60px;
   text-align: center;
 }

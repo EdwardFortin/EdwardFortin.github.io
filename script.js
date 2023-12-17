@@ -11,7 +11,8 @@ if (scrollToAboutButton) {
 
 
 var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontent = document.getElementsByClassName("tab-content");
+var tabcontent = document.getElementsByClassName("tab-content");
+var btn = document.getElementsByClassName("active-btn");
 
     function opentab(tabname) {
         for (var i = 0; i < tablinks.length; i++) {
@@ -31,5 +32,3 @@ var tablinks = document.getElementsByClassName("tab-links");
             }
         }
     }
-
-
