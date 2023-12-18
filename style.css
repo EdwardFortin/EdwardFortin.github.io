@@ -389,8 +389,6 @@ nav.fill ul li a:hover:after {
   
 }
 
-
-
 .linkedin img,
 .github img,
 .facebook img,
@@ -801,7 +799,7 @@ form .btn2{
   
   .contact-column-1,
   .contact.-column-2 {
-    flex-basis: 48%;
+    flex-basis: 40%;
   }
   
   .contact-column-1{
@@ -814,7 +812,7 @@ form .btn2{
   
   form input,
   form textarea {
-    width: 130%;
+    width: 150%;
   }
 
   form textarea {
